@@ -1,0 +1,84 @@
+.main-container {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 5rem;
+}
+.info {
+  margin-top: 7rem;
+  font-family: Roboto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.greet {
+  font-size: 5rem;
+}
+.name {
+  color: #ff0000;
+}
+.innerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1600px) {
+}
+@media screen and (max-width: 1400px) {
+  .innerContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .greet {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .innerContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+  .greet {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .innerContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .greet {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .innerContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .greet {
+    font-size: 3rem;
+  }
+}

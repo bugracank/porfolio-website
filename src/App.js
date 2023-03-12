@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./Components/navbar/navbar";
+import Main from "./Components/main/main";
+import Tech from "./Components/tech/Tech";
 
-function App() {
+export default function App() {
+  const styles = {
+    background: {
+      backgroundColor: "#111A21",
+    },
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.background}>
+      <Navbar />
+      <Main />
+      <Tech />
     </div>
   );
 }
-
-export default App;

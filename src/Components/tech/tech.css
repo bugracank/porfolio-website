@@ -1,0 +1,14 @@
+.tech-info {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+  margin-top: 7rem;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+.tech-ball {
+  margin-top: 5rem;
+  padding-bottom: 12rem;
+}
