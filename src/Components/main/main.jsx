@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Computer from "../Computer";
 import "./main.css";
 
-const main = () => {
+const Main = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <div className="main-container">
       <div className="container mx-auto">
         <div className="innerContainer">
+          <div className="line">
+            <div className="line-head"></div>
+            <div className="line-vertical"></div>
+          </div>
           <p className=" info">
             <span className="greet">
               Hi I'm <span className="name">Buğracan</span>
@@ -42,7 +68,11 @@ const main = () => {
             />
             <ambientLight />
             <pointLight intensity={1} position={[10, 10, 10]} />
-            <Computer rotation={[-0.01, -0.2, -0.1]} position={[0, -1, 0]} />
+            <Computer
+              isMobile={isMobile}
+              rotation={[0.05, -1.9, -0.01]}
+              position={isMobile ? [0, -0.2, 0] : [0, -1, 0]}
+            />
           </Canvas>
         </div>
       </div>
@@ -50,4 +80,4 @@ const main = () => {
   );
 };
 
-export default main;
+export default Main;

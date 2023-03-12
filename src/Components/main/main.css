@@ -4,6 +4,7 @@
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   padding: 5rem;
+  height: 100vh;
 }
 .info {
   margin-top: 7rem;
@@ -22,6 +23,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 5rem;
+}
+.line {
+  display: flex;
+  margin-right: 5rem;
+  margin-top: 5rem;
+}
+.line-head {
+  background-color: #ff0000;
+  width: 23px;
+  height: 23px;
+  z-index: 999;
+  border-radius: 50%;
+}
+.line-vertical {
+  position: absolute;
+  background-color: #ff0000;
+  width: 5px;
+  height: 30vh;
+  margin-left: 0.65rem;
+  margin-top: 1rem;
+  border-radius: 25%;
 }
 @media screen and (max-width: 1600px) {
 }
@@ -38,7 +61,19 @@
   .greet {
     font-size: 4rem;
   }
+  .line-head {
+    position: absolute;
+    left: 0;
+    margin-left: 1rem;
+  }
+  .line-vertical {
+    left: 0;
+    margin-top: 1rem;
+    margin-left: 1.56rem;
+    border-radius: 25%;
+  }
 }
+
 @media screen and (max-width: 1050px) {
   .innerContainer {
     flex-direction: column;
@@ -51,6 +86,17 @@
   }
   .greet {
     font-size: 3.2rem;
+  }
+  .line-head {
+    position: absolute;
+    left: 0;
+    margin-left: 1rem;
+  }
+  .line-vertical {
+    left: 0;
+    margin-top: 1rem;
+    margin-left: 1.56rem;
+    border-radius: 25%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -66,6 +112,17 @@
   .greet {
     font-size: 3rem;
   }
+  .line-head {
+    position: absolute;
+    left: 0;
+    margin-left: 1rem;
+  }
+  .line-vertical {
+    left: 0;
+    margin-top: 1rem;
+    margin-left: 1.56rem;
+    border-radius: 25%;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -80,5 +137,20 @@
   }
   .greet {
     font-size: 3rem;
+  }
+  .canvas {
+    margin-top: 1rem;
+  }
+
+  .line-head {
+    position: absolute;
+    left: 0;
+    margin-left: 1rem;
+  }
+  .line-vertical {
+    left: 0;
+    margin-top: 1rem;
+    margin-left: 1.56rem;
+    border-radius: 25%;
   }
 }

@@ -7,18 +7,40 @@ Source: https://sketchfab.com/3d-models/computer-desk-c67f61fa444044bcb88ec3e28f
 Title: Computer Desk
 */
 
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function Computer(props) {
   const { nodes, materials } = useGLTF("/computer_desk/scene.gltf");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <group {...props} dispose={null}>
       <mesh
         geometry={nodes.Cube029_Material_0.geometry}
         material={materials.Material}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={20}
+        scale={isMobile ? 11 : 20}
       />
     </group>
   );
