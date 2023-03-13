@@ -6,7 +6,7 @@ import "./tech.css";
 
 const Tech = () => {
   return (
-    <div className="tech-container">
+    <div className="tech-container" id="tech">
       <h1 className="tech-info">
         These are the <span className="name">technologies</span> that I
         currently know.!

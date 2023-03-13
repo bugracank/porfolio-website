@@ -11,6 +11,7 @@
   font-family: Roboto;
   font-size: 4rem;
   font-weight: bold;
+  cursor: default;
 }
 .contact-form {
   display: flex;
@@ -25,6 +26,10 @@
   flex-direction: column;
   width: 1100px;
   margin-bottom: 2rem;
+}
+.contact-label {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 input {
   color: black;

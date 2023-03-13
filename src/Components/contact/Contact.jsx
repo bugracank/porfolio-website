@@ -40,13 +40,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div id="contact" className="contact-container">
       <h2 className="contact-header">
         Feel free to contact me via <span className="name"> form </span> below!!
       </h2>
       <form className="contact-form" ref={form} onSubmit={sendEmail}>
         <div className="inner-contact-form">
-          <label>Name</label>
+          <label className="contact-label">Name</label>
           <input
             value={value1}
             onInput={onInput}
@@ -55,7 +55,7 @@ const Contact = () => {
           />
         </div>
         <div className="inner-contact-form">
-          <label>Email</label>
+          <label className="contact-label">Email</label>
           <input
             value={value2}
             onInput={onInput1}
@@ -64,7 +64,7 @@ const Contact = () => {
           />
         </div>
         <div className="inner-contact-form">
-          <label>Message</label>
+          <label className="contact-label">Message</label>
           <textarea value={value3} onInput={onInput2} name="message" />
         </div>
 

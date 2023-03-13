@@ -22,13 +22,13 @@ const Scroll = () => {
   return (
     <div>
       {isVisible && (
-        <div className="scroll rotate-center">
+        <a href="#/" className="scroll rotate-center">
           <BsFillArrowUpCircleFill
             onClick={() => {
               window.scrollTo(0, 0);
             }}
           />
-        </div>
+        </a>
       )}
     </div>
   );

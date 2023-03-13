@@ -28,7 +28,7 @@ const Main = () => {
     };
   }, []);
   return (
-    <div className="main-container">
+    <div id="/" className="main-container">
       <div className="container mx-auto">
         <div className="innerContainer">
           <div className="line">

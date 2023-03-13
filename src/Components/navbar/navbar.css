@@ -12,23 +12,49 @@
 }
 .innerContainer-navbar {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 5rem;
+  margin-top: 1rem;
 }
 .logo {
   display: flex;
   width: 6%;
   margin-left: 1rem;
 }
+.logo-a {
+  display: flex;
+  align-items: center;
+}
 .text {
+  margin-top: 1.5rem;
   color: #fff;
   z-index: 2;
   font-size: 2rem;
   font-weight: bold;
   margin-left: 1rem;
+  cursor: default;
 }
+.nav-sec {
+  display: flex;
+}
+.nav-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+.white {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  padding-right: 1rem;
+  margin-right: 1rem;
+}
+
 .icon-container {
-  margin: 1rem;
+  margin-top: 0.3rem;
+  margin-right: 5rem;
 }
 #icon {
   color: #fff;

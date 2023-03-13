@@ -12,6 +12,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: #fff;
+  cursor: default;
 }
 .greet {
   font-size: 5rem;

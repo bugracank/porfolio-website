@@ -19,28 +19,38 @@ const navbar = () => {
         <p className="text">Buğracan Kaya</p>
       </div>
 
-      <div className="icon-container">
-        <a
-          className="icon-a"
-          target="blank"
-          href="https://github.com/bugracank"
-        >
-          <AiOutlineGithub id="icon" />
-        </a>
-        <a
-          className="icon-a"
-          target="blank"
-          href="https://github.com/bugracank"
-        >
-          <AiOutlineInstagram id="icon" />
-        </a>
-        <a
-          className="icon-a"
-          target="blank"
-          href="https://github.com/bugracank"
-        >
-          <AiOutlineTwitter id="icon" />
-        </a>
+      <div className="nav-sec">
+        <ul className="nav-li">
+          <a href="#tech">
+            <li className="white">Work</li>
+          </a>
+          <a href="#contact">
+            <li className="white">Contact</li>
+          </a>
+        </ul>
+        <div className="icon-container">
+          <a
+            className="icon-a"
+            target="blank"
+            href="https://github.com/bugracank"
+          >
+            <AiOutlineGithub id="icon" />
+          </a>
+          <a
+            className="icon-a"
+            target="blank"
+            href="https://github.com/bugracank"
+          >
+            <AiOutlineInstagram id="icon" />
+          </a>
+          <a
+            className="icon-a"
+            target="blank"
+            href="https://github.com/bugracank"
+          >
+            <AiOutlineTwitter id="icon" />
+          </a>
+        </div>
       </div>
     </nav>
   );

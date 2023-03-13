@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Components/navbar/navbar";
 import Main from "./Components/main/Main";
 import Tech from "./Components/tech/Tech";
@@ -13,14 +12,12 @@ export default function App() {
     },
   };
   return (
-    <BrowserRouter>
-      <div style={styles.background}>
-        <Navbar />
-        <Main />
-        <Tech />
-        <Contact />
-        <Scroll />
-      </div>
-    </BrowserRouter>
+    <div style={styles.background}>
+      <Navbar />
+      <Main />
+      <Tech />
+      <Contact />
+      <Scroll />
+    </div>
   );
 }
