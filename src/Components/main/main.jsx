@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Computer from "../Computer";
 import "./main.css";
+import { BsArrowBarDown } from "react-icons/bs";
+import { motion, useInView } from "framer-motion";
 
 const Main = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -28,8 +32,15 @@ const Main = () => {
     };
   }, []);
   return (
-    <div id="/" className="main-container">
-      <div className="container mx-auto">
+    <div ref={ref} id="/" className="main-container">
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className="container mx-auto"
+      >
         <div className="innerContainer">
           <div className="line">
             <div className="line-head"></div>
@@ -76,6 +87,17 @@ const Main = () => {
           </Canvas>
         </div>
       </div>
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.8 }}
+        onHoverStart={(e) => {}}
+        onHoverEnd={(e) => {}}
+        className="main-icon"
+      >
+        <a href="#tech">
+          <BsArrowBarDown />
+        </a>
+      </motion.div>
     </div>
   );
 };

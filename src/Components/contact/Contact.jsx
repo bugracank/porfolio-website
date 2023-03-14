@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
+import { useInView } from "framer-motion";
 
 const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const form = useRef();
   const [value1, setValue1] = useState("");
   const [value2, setValue2] = useState("");
@@ -40,11 +43,20 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="contact-container">
+    <div ref={ref} id="contact" className="contact-container">
       <h2 className="contact-header">
         Feel free to contact me via <span className="name"> form </span> below!!
       </h2>
-      <form className="contact-form" ref={form} onSubmit={sendEmail}>
+      <form
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className="contact-form"
+        ref={form}
+        onSubmit={sendEmail}
+      >
         <div className="inner-contact-form">
           <label className="contact-label">Name</label>
           <input

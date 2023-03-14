@@ -10,6 +10,9 @@ export default function App() {
     background: {
       backgroundColor: "#111A21",
     },
+    red: {
+      backgroundColor: "red",
+    },
   };
   return (
     <div style={styles.background}>
