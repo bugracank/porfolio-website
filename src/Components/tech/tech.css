@@ -3,10 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .tech-info {
   margin: 3rem;
@@ -19,7 +15,98 @@
 }
 .tech-ball {
   margin-top: 15rem;
-  padding-bottom: 12rem;
+}
+.tech-line {
+  width: 40%;
+  height: 1px;
+  background-color: red;
+  border-radius: 40%;
+  margin-top: 21rem;
+}
+.tech-line-2 {
+  width: 5%;
+  height: 1px;
+  background-color: #ff0069;
+  border-radius: 40%;
+}
+.card-container {
+  display: flex;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.inner-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  padding: 5rem;
+}
+.services-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  border: 1px solid #fff;
+  margin: 1rem;
+  padding: 3rem;
+  background-color: #111a35;
+  color: #fff;
+  border-radius: 1.2rem;
+}
+.card-tilt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  margin-bottom: 1rem;
+  padding: 3px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    45deg,
+    hsl(335deg 100% 50%) 0%,
+    hsl(338deg 100% 50%) 21%,
+    hsl(340deg 100% 50%) 30%,
+    hsl(342deg 100% 50%) 39%,
+    hsl(344deg 100% 50%) 46%,
+    hsl(347deg 100% 50%) 54%,
+    hsl(349deg 100% 50%) 61%,
+    hsl(352deg 100% 50%) 69%,
+    hsl(355deg 100% 50%) 79%,
+    hsl(0deg 100% 50%) 100%
+  );
+}
+.card-icon {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1.3rem;
+}
+.services-line {
+  width: 40%;
+  height: 3px;
+  background-color: red;
+  border-radius: 40%;
+  margin-top: 5rem;
+  z-index: 999;
 }
 @media screen and (max-width: 1600px) {
 }

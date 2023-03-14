@@ -98,6 +98,7 @@ const Main = () => {
           <BsArrowBarDown />
         </a>
       </motion.div>
+      <div className="main-line"></div>
     </div>
   );
 };
